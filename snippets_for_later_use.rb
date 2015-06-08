@@ -15,3 +15,6 @@ h.has_value?(100)   #=> true
 h.has_value?(999)   #=> false
 ANSWER somewhere in here http://ruby-doc.org/core-2.1.1/Hash.html#method-i-each
 
+resources: http://stackoverflow.com/questions/19154011/how-to-get-the-users-input-and-check-against-the-items-in-an-array
+
+http://ruby-doc.org/core-2.1.1/Hash.html (look at fetch)
