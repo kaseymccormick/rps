@@ -63,23 +63,17 @@ end
 #sending player2's move to player.rb to collect (because I want to eventually pull up history)
 player2.player_decision(player2_decision)
 
-
-#go into winner hash find player1's decision if that key's value is equal to player2's decision player 1 wins ifels find player 2 as key and compare to player 1 as value = player 2 wins else both are same it's a tie add points to winners.
-#**************************BROKEN now that added lizard spock **************************************
+#if player 1 and player 2's decisions are the same it's a tie puts that
 if player2_decision.to_sym == player1_decision.to_sym
   puts "telepathic tie, no points awarded" 
-  
-#player 1 alwys wins
-#need to find a way to get player1_decision included in the array in the value of playe2decisions key 
-#go into winner array see if player 2's decision converted to symbol is there as player 2's decision as key see if value equals value's array includes player 1's decision.
-elsif winner.fetch(player2_decision.to_sym) == winner[player2_decision.to_sym].include?(player1_decision.to_s) 
-  puts "#{name2} triumphs" 
-  player2.player_score(1)
-else 
+#go into winner array see if player 2's decision converted to symbol is is a key. then look in the value's array for player 2's decision
+elsif winner[player1_decision.to_sym].include?(player2_decision.to_s)
   puts "#{name1} triumphs" 
-  player1.player_score(1) 
-  puts "YAY" if winner[:rock].include?(player2_decision.to_s)
-  binding.pry 
+  player1.player_score(1)
+#if player 1 didn't win then player 2 did  
+else 
+  puts "#{name2} triumphs" 
+  player2.player_score(1) 
 end
 
 #displaying players names and respective scores
