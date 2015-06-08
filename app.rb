@@ -1,17 +1,3 @@
-=begin
-Basic rock-paper-scissors game (probably no custom classes yet) on the command line. 
-Should only accept valid moves. 
-The program is over when a single round of RPS has been played. 
-This is your app.rb – or the beginnings of it at least. 
-
-Now create a Player class. Modify your "driver" (app.rb) to create players, prompt them for moves, and have them congratulated by name when they win. Player objects should have attributes for storing their name and their move (i.e. their choice of "weapon"). And, as before, only valid moves should be allowed. From the user’s perspective, the game should appear to work exactly the same – except the game calls the user by their name.
-Modify the driver so that it lets players play a best-of-n match. This will require you to keep track of each player’s score.
-=end
-=begin
-resources: http://stackoverflow.com/questions/19154011/how-to-get-the-users-input-and-check-against-the-items-in-an-array
-
-http://ruby-doc.org/core-2.1.1/Hash.html (look at fetch)
-=end
 #gathering player class from player.rb
 require_relative "player.rb"
 
@@ -85,14 +71,14 @@ if player2_decision.to_sym == player1_decision.to_sym
   
 #player 1 alwys wins
 #need to find a way to get player1_decision included in the array in the value of playe2decisions key 
-
-elsif winner.fetch(player2_decision.to_sym) == winner.each_value {|player1_decision|} 
+#go into winner array see if player 2's decision converted to symbol is there as player 2's decision as key see if value equals value's array includes player 1's decision.
+elsif winner.fetch(player2_decision.to_sym) == winner[player2_decision.to_sym].include?(player1_decision.to_s) 
   puts "#{name2} triumphs" 
   player2.player_score(1)
-else winner.fetch(player1_decision.to_sym) == player2_decision.to_s
+else 
   puts "#{name1} triumphs" 
   player1.player_score(1) 
-  puts winner[:rock]
+  puts "YAY" if winner[:rock].include?(player2_decision.to_s)
   binding.pry 
 end
 
