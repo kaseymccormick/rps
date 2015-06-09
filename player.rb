@@ -9,8 +9,9 @@ class Player
     @grand_total = 0
   end  
   
-  #method player_decision requires decision from app.rb and stores it in a player_decisions array
-  #returns decision into array it can only be a one of three strings provided in the possible_moves array 
+  #method player_decision requires playerx_decision from app.rb and stores it in a player_decisions array
+  #
+  #returns nill if empty or the array if multiple moves
   def player_decision(decision)
     player_decisions.push(decision)
   end
