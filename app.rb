@@ -77,7 +77,7 @@ player2.player_decision(player2_decision)
 #declares the winner of the round by using RockPaperScissors method rps_winner 
 #arugments needed player1_decision and player2_decision in string form
 puts rps_game.rps_winner(player1_decision, player2_decision)
-
+  
 
 #displaying players names from RockPaperScissors and respective scores from player.rb
 #rps.game = current game
