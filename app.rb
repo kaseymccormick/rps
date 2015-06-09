@@ -6,7 +6,7 @@ require_relative "rock_paper_scissors.rb"
 #setting round number to zero
 round = 0 
 #initiating game
-puts"Let's play a game, \n\ type rps for Rock, Paper, Sissors \n\ \t or ttt for \n\Tic-Tac-Toe"
+puts"Let's play a game, \n\ type rps for Rock, Paper, Sissors, Lizard, Spock \n\ \t or \n\ type ttt for Tic-Tac-Toe"
 game_type = gets.chomp.downcase
 
 #creating an instance of the game the person chooses to play
@@ -45,7 +45,7 @@ rps_game.player2 = player2
 # of best of # of rounds entered above
 begin
 #asking for name 1's choice
-puts "#{name1} please enter your choice for rock, paper, scissors"
+puts "#{name1} please enter your choice for rock, paper, scissors, lizard, spock"
 player1_decision = gets.chomp.downcase
 #looping for valid move
 
