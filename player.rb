@@ -1,10 +1,3 @@
-=begin
-Now create a Player class. Modify your "driver" (app.rb) to create players, prompt them for moves, 
-and have them congratulated by name when they win. Player objects should have attributes for 
-storing their name and their move (i.e. their choice of "weapon"). And, as before, only valid
- moves should be allowed. From the user’s perspective, the game should appear to work exactly 
-the same – except the game calls the user by their name.
-=end
 class Player
   
   #writing and reading name players name, player_decisions rock paper scissors et and grand_total ongoing score tally
@@ -30,8 +23,7 @@ class Player
   
 end
   
-  #i want to create a hash {key : value} that the value is an array of moves and the key is the player
-  #{frank => [rock, paper, scissors, scissors]
+  
 
 
 
