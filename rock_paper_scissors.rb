@@ -63,9 +63,6 @@ class RockPaperScissors
     end   
     
   end
-  
-   binding.pry
-  
 
   # adds to the players score if code elswhere privides a score amount to use with this method
   #
