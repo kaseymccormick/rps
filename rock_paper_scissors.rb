@@ -1,10 +1,11 @@
 # creating RockPaperScissors blueprint
 class RockPaperScissors
   #read/write player1 and player2 
-  attr_accessor :player1, :player2
+  attr_accessor :player1, :player2, :victor
   def initalize
     #i want to collect the decision and store it so eventually can pull up a players history so decision is used multiple times for collection, helps to have it initialized. But i dont need the players decision to start a RockPaperScissors game.
     @decision
+    @victor
   end
   
   #array of possible moves
@@ -47,23 +48,20 @@ class RockPaperScissors
   # else 
   #      => player 2 wins
   #
-  #returns nil , intiger, intiger
+  #returns nil , player1.name, player2.name
   def rps_winner (player1_decision, player2_decision)
-    
     if player2_decision.to_sym == player1_decision.to_sym
-      puts "telepathic tie, no points awarded" 
-      
+      @victor =  nil
     elsif winner[player1_decision.to_sym].include?(player2_decision.to_s)
-      puts "#{player1.name} triumphs" 
-      player1.player_score(1)
-      
+      @victor = player1.name
+      score_incrementor(victor) 
     else 
-      puts "#{player2.name} triumphs" 
-      player2.player_score(1) 
+      @victor = player2.name
+      score_incrementor(victor)
     end   
-    
+    @victor  
   end
-
+  
   # adds to the players score if code elswhere privides a score amount to use with this method
   #
   # player_score - requires an intiger as argument
@@ -74,9 +72,14 @@ class RockPaperScissors
   # => 1 (given they started at zero)
   #
   #returns grand total score in Intiger form
-  def player_score(score)
-    @grand_total += (score)
+  def score_incrementor(victor)
+    if victor == player1.name
+      player1.player_score(1)
+    else 
+      player2.player_score(1)
+    end
   end
+
 end
 
 

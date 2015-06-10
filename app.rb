@@ -76,8 +76,12 @@ player2.player_decision(player2_decision)
 
 #declares the winner of the round by using RockPaperScissors method rps_winner 
 #arugments needed player1_decision and player2_decision in string form
-puts rps_game.rps_winner(player1_decision, player2_decision)
-  
+# if rps_game.rps_winner(player1_decision, player2_decision) the rps_winner method returns nil if tie. if checks to se if a truth or truthy value, nil evaluates (is) to falsey so it proceeds to the else statement.
+if rps_game.rps_winner(player1_decision, player2_decision)
+  puts "#{rps_game.victor} wins this round."
+ else  
+   puts "telepathic tie, no one wins"
+end
 
 #displaying players names from RockPaperScissors and respective scores from player.rb
 #rps.game = current game

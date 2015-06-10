@@ -21,7 +21,7 @@ class Player
   def player_score(score)
     @grand_total += (score)
   end
-  
+
 end
   
   
