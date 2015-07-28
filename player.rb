@@ -17,10 +17,10 @@ class Player
   end
   
   #method player_score requires score *in int. form* to tally up the score in grand_total
-  #returns grand total score in int. form
-  def player_score(score)
-    @grand_total += (score)
-  end
+    #returns grand total score in int. form
+    def player_score(score)
+      @grand_total += (score)
+    end
 
 end
   
